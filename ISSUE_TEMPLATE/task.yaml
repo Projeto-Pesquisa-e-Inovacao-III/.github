@@ -1,0 +1,32 @@
+name: Task
+description: Tarefa de desenvolvimento
+title: "[TASK] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: O que precisa ser feito?
+      placeholder: "Ex: Criar tela de login com email e senha"
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Como saber que está pronto?
+      placeholder: |
+        - [ ] Tela criada com campos de email e senha
+        - [ ] Botão de login funcionando
+        - [ ] Validação básica dos campos
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: observacoes
+    attributes:
+      label: Observações
+      placeholder: "Links úteis, dependências, qualquer coisa relevante"

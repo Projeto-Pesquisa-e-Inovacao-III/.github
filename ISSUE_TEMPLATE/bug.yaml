@@ -1,0 +1,45 @@
+name: Bug
+description: Reportar um problema
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que está errado?
+      placeholder: "Ex: Botão de salvar não está funcionando na página de perfil"
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir?
+      placeholder: |
+        1. Abrir página de perfil
+        2. Alterar o nome
+        3. Clicar em salvar
+        4. Nada acontece
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que deveria acontecer?
+      placeholder: "Ex: Nome deveria ser salvo e aparecer atualizado"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detalhes
+    attributes:
+      label: Informações adicionais
+      placeholder: |
+        - Browser usado
+        - Mensagem de erro (se tiver)
+        - Print da tela (opcional)

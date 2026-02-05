@@ -1,0 +1,38 @@
+name: Feature
+description: Nova funcionalidade ou melhoria
+title: "[FEATURE] "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual o problema ou necessidade?
+      placeholder: "Ex: Precisamos que usuários possam recuperar senha esquecida"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Como deveria funcionar?
+      placeholder: |
+        Ex: 
+        - Botão "Esqueci minha senha" na tela de login
+        - Enviar email com link de reset
+        - Página pra criar nova senha
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Como saber que está pronto?
+      placeholder: |
+        - [ ] Botão na tela de login
+        - [ ] Email sendo enviado
+        - [ ] Link funciona e permite trocar senha
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
