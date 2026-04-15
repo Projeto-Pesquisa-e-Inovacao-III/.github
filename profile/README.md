@@ -1,17 +1,24 @@
-Regras gerais:
+# CSF
 
-1. Utilizar português para descrever o que foi feito, mas usar palavras chaves em inglês para a ação, ex:
-   
-   add - Site institutional
+Este projeto visa a digitalização completa da gestão de alunos, eliminando a dependência de métodos analógicos. O sistema centraliza o controle de disponibilidade, agendamentos e transações financeiras.
 
-2. Todos os repositórios devem ser consolidados por 3 Branches: Main, Homologation, Develop
-3. Todos os commits devem ser formatados como: ação - descrição
-4. As ações que devem ser utilizadas são:
-   
-   - add, commit focado em adição de algo
-   - del, commit focado em deletar algo
-   - fix, commit focado em arrumar algo
-   - doc, commit focado em documentar algo (pode ser add ou fix de documentação)
+## Arquitetura do Projeto
 
-2. Branches de desenvolvimento devem ser chamadas feat/_componente_ em PascalCase ex: feat/SiteInstitucional 
-3. Os PRs devem ser chamados feat - _componente_ em PascalCase ex: feat - SiteInstitucional
+O sistema é composto por três componentes principais:
+
+### 1. Api-system
+Responsável pela lógica de negócio principal do domínio.
+* **Tecnologias:** Java 21, Spring Boot.
+* **Responsabilidades:** Autenticação (Login), gerenciamento de perfil, controle de disponibilidade e gestão de agendamentos.
+* **Persistência:** MySQL.
+
+### 2. Api-pag
+Microserviço dedicado ao processamento financeiro.
+* **Tecnologias:** Java 21, Spring Boot.
+* **Responsabilidades:** Processamento de pagamentos, controle de pacotes de aulas e integração com gateways de pagamento.
+* **Persistência:** MySQL
+
+### 3. React-app
+Interface de usuário para o Personal Trainer.
+* **Tecnologias:** React, TypeScript.
+* **Responsabilidades:** Consumo da API via REST, visualização de agenda, gestão de alunos e dashboards financeiros.
